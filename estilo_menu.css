@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+body {
+	font-family: 'Orbitron', sans-serif; 
+	font-size: 16px;	
+}
+.nav{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.nav li{
+	float: left;
+	width: 303px;
+	position: relative;
+}
+.nav li a{
+	background: #333;
+	color: #fff;
+	display: block;
+	padding: 15px 8px;
+	text-decoration: none;
+	border-top: 1px solid #069;
+}
+.nav li a:hover{
+	color: #069;
+}
+/*== sub menu ++*/
+.nav ul{
+	display: none;
+	position: absolute;
+	left: 0;
+	list-style: none;
+	padding: 0;
+}
+.nav ul li{
+	width: 303px;
+	float: left;
+}
+.nav ul a{
+	display: block;
+	height: 15px;
+	padding:15px 8px;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #222;
+}
+.nav ul a:hover{
+	color: #069;
+}

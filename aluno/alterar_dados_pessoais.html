@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	
+	<meta charset= "utf-8">
+	<title>Alterar dados pessoais</title>
+	<link rel="stylesheet" type="text/css" href="../css/academico.css">
+	
+	<script type="text/javascript" src="../js/jquery.js"></script>
+   	<script type="text/javascript" src="../script_menu.js"></script>
+    <script type="text/javascript" src="../jquery.maskedinput.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+        $("input.rg").mask("999.999");
+    
+        });
+    </script>
+   	<script >
+   		function validacao(){
+   			var nome = document.getElementById("nome");
+   			if (nome.value == ""){
+   				alert("preencha o campo nome!");
+   				nome.focus();
+   				return false;
+   			}
+   			var rg = document.getElementById("rg");
+   			if (rg.value == ""){
+   				alert("preencha o campo RG!");
+   				rg.focus();
+   				return false;
+   			}
+   			var matricula = document.getElementById("matricula");
+   			if (matricula.value == ""){
+   				alert("preencha o campo matricula!");
+   				matricula.focus();
+   				return false;
+   			}
+        return true;
+   		}
+
+   	</script>
+</head>
+
+<body>
+	<ul class="nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a>Menu do Aluno</a>
+            <ul>
+                <li><a href="alterar_dados_pessoais.html">Alterar dados pessoais</a></li>
+                <li><a href="visualizar_notas_faltas.html">Visualizar notas e faltas</a></li>
+                <li><a href="emitir_comprovante_matricula.html">Emitir comprovante de matrícula</a></li>
+            </ul>
+        </li>
+        <li><a>Menu do Professor</a>
+            <ul>
+                <li><a href="../professor/registrar_faltas.html">Registrar faltas</a></li>
+                <li><a href="../professor/registrar_notas.html">Registrar notas</a></li>
+                <li><a href="../professor/cadastrar_projeto_pesquisa.html">Cadastrar projeto de pesquisa</a></li>
+            </ul>
+        </li>
+        <li><a>Menu da Secretaria</a>
+            <ul>
+                <li><a href="../secretaria/cadastrar_professor.html">Cadastrar professor</a></li>
+                <li><a href="../secretaria/cadastrar_curso_diciplinas.html">Cadastrar cursos e diciplinas</a></li>
+                <li><a href="../secretaria/realizar_matricula.html">Realizar matrícula</a></li>
+                <li><a href="../secretaria/emitir_historico.html">Emitir histórico</a></li>
+            </ul>
+        </li>
+        <li><a href="../help.html" target="_blank">Ajuda</a></li>
+    </ul>
+		
+		<div class="superior">
+			<img src="../computer-icon5.png" alt="imagem do logotipo do sistema">
+			<h1>Sistema de Gestão Acadêmica - ACAD </h1><br>
+			<h2><a href="menu_aluno.html">Aluno</a>:: Alterar Dados Pessoais</h2><br>
+		</div>
+	<form name="altDadPes" action="#" method="GET" onsubmit="return validacao();">
+		<div class="meio">
+			<fieldset class="grupo">
+				<div class="campo">
+					<label for="nome">Nome&nbsp;*</label>
+						<input type="text" name="nome" id="nome">
+				</div><br>
+				<div class="campo">
+					<label for="rg">RG&nbsp;*</label>
+						<input type="text" class="rg" name="rg" id="rg">
+				</div><br>
+				<div class="campo">
+					<label for="matricula">Matrícula&nbsp;*</label>
+						<input type="text" name="matricula" id="matricula">
+				</div><br>
+						<input type="submit" name="salva" value="salvar">
+		</fieldset>
+	</form>
+		</div>
+		<div>
+			<p align ="right"><a href="../index.html">Menu principal</a></p>
+		</div>
+
+		
+</body>
+
+</html>

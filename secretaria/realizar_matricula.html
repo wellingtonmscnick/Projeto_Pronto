@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../script_menu.js"></script>
+	<meta charset= "utf-8">
+	<title>Realizar matrícula</title>
+	<link rel="stylesheet" type="text/css" href="../css/academico.css">
+	<script >
+   		function validacao(){
+   			var aluno = document.getElementById("aluno");
+   			if (aluno.value == ""){
+   				alert("preencha o campo aluno!");
+   				aluno.focus();
+   				return false;
+   			}
+   			var curso = document.getElementById("curso");
+   			if (curso.value == ""){
+   				alert("preencha o campo curso!");
+   				curso.focus();
+   				return false;
+   			}
+   			var turno = document.getElementsByName("turno");
+			if(turno[0].checked==false && turno[1].checked==false){
+			alert("Marque uma opção do turno");
+			turno[0].focus();
+			return false;
+		}
+   			var semestre = document.getElementById("semestre");
+   			if (semestre.value == ""){
+   				alert("preencha o campo semestre!");
+   				semestre.focus();
+   				return false;
+   			}
+   			var disciplina = document.getElementById("disciplina");
+   			if (disciplina.value == ""){
+   				alert("preencha o campo numero de disciplina!");
+   				disciplina.focus();
+   				return false;
+   			}
+   			
+		return true;
+   		}
+
+   	</script>
+</head>
+
+<body>
+	<ul class="nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a>Menu do Aluno</a>
+            <ul>
+                <li><a href="../aluno/alterar_dados_pessoais.html">Alterar dados pessoais</a></li>
+                <li><a href="../aluno/visualizar_notas_faltas.html">Visualizar notas e faltas</a></li>
+                <li><a href="../aluno/emitir_comprovante_matricula.html">Emitir comprovante de matrícula</a></li>
+            </ul>
+        </li>
+        <li><a>Menu do Professor</a>
+            <ul>
+                <li><a href="../professor/registrar_faltas.html">Registrar faltas</a></li>
+                <li><a href="../professor/registrar_notas.html">Registrar notas</a></li>
+                <li><a href="../professor/cadastrar_projeto_pesquisa.html">Cadastrar projeto de pesquisa</a></li>
+            </ul>
+        </li>
+        <li><a>Menu da Secretaria</a>
+            <ul>
+                <li><a href="cadastrar_professor.html">Cadastrar professor</a></li>
+                <li><a href="cadastrar_curso_diciplinas.html">Cadastrar cursos e diciplinas</a></li>
+                <li><a href="realizar_matricula.html">Realizar matrícula</a></li>
+                <li><a href="emitir_historico.html">Emitir histórico</a></li>
+            </ul>
+        </li>
+        <li><a href="../help.html" target="_blank">Ajuda</a></li>
+    </ul>
+
+		<div class="superior">
+			<img src="../computer-icon5.png" alt="imagem do logotipo do sistema">
+			<h1>Sistema de Gestão Acadêmica - ACAD </h1><br>
+			<h2><a href="menu_secretaria.html">Secretaria</a>:: Realizar Matrícula</h2><br>
+		</div>
+	<form action="#" method="GET" onsubmit="return validacao();">
+		<div class="meio">
+			<fieldset class="grupo">
+				<div class="campo">
+					<label for="aluno">ALUNO(A):&nbsp;*</label>
+						<select name="Aluno" id="aluno">
+							<option value="charles">Charles Gavin</option>
+							<option value="paulo">Paulo Miklos</option>
+							<option value="branco">Branco Melo</option>
+							<option value="nando">Nando reis</option>
+							<option value="tony">Tony Beloto</option>
+							<option value="marcelo">Marcelo Fromer</option>
+							<option value="arnaldo">Arnaldo Antunes</option>
+						</select>
+				</div><br>
+				<div class="campo">
+					<label for="curso">CURSO:&nbsp;*</label>
+						<select name="Curso" id="curso"> 
+							<option value="informatica">Informática para Internet</option>
+							<option value="eletronica">Eletrônica</option>
+							<option value="edificaçoes">Edificações</option>
+						</select>
+				</div><br>
+				<div class="campo">
+					<label class="checkbox">TURNO:&nbsp;*</label>
+						Tarde<input type="radio" name="turno" id="tarde">
+						Noite<input type="radio" name="turno" id="noite"><br>
+				</div><br>
+				<div class="campo">
+					<label for="semestre">SEMESTRE:&nbsp;*</label>	
+						<input type="text" name="nome" id="semestre" maxlength=8><br>
+				</div>
+				<div class="campo">
+					<label for="disciplina">DISCIPLINA:&nbsp;*</label>
+						<select name="Disciplina" id="disciplina">
+							<option value="">Escolher Disciplina:</option>
+							<option value="logica">Lógica de Programação</option>
+							<option value="banco">Banco de Dados</option>
+							<option value="redes">Redes de Computadores</option>
+							<option value="ingles">Inglês Intrumental</option>
+							<option value="portugues">Português Instrumental</option>
+							<option value="fundamentos">Fundamentos da Infomática</option>
+							<option value="matematica">Matemática</option>
+							<option value="web1">WEB 1</option>
+							<option value="web2">WEB 2</option>
+							<option value="fisica">Física</option>
+							<option value="eletricidade">Eletricidade Predial</option>
+							<option value="softwere">Engeharia de Softwere</option>
+							<option value="predial">Engeharia Predial</option>
+							<option value="segTrabalho">Segurança do Trabalho</option>
+							<option value="segSistemas">Segurança do Sistemas</option>
+							<option value="etica">Ética e Cidadania</option>
+						</select>
+				</div><br>
+					<input type="submit" name="efetua" value="Efetuar Matrícula">		
+			</fieldset>
+		</div>	
+	</form>
+		<div class="inferior">
+			<p align ="right"><a href="../index.html">Menu principal</a></p>
+		</div>	
+</body>
+
+</html>
