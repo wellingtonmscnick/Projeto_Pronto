@@ -9,6 +9,7 @@ CREATE TABLE aluno(
 
 CREATE TABLE disciplina(
    
+	
 	semestre VARCHAR(6),
 	codigoDisciplina int(3),
 	nomeProfessor VARCHAR(50)
